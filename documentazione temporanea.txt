@@ -1,0 +1,53 @@
+DOCUMENTAZIONE TEMPORANEA
+__________________________________________________________________________
+[input dell'operatore]:
+	- lista insegnanti assenti (aggiornata giornalmente manualmente con GUI):
+		- inserire il singolo insegnante
+		- inserire l'orario di assenza dell'insegnante (1a ora fino a... | tutto il giorno)
+	- orario degli insegnanti: database formato .csv input/output
+	- inserire gli insegnanti disponibili (anche se non hanno l'ora buca)
+		- inseriti manualmente per cause:
+			- gita scolastica della classe (inserendo tutti gli insegnanti di quella classe)
+				- orario della gita
+			- altri motivi legati alla classe
+		- inseriti perchè hanno l'ora buca e decidono di essere disponibili
+
+[gestione dell'orario (automatico)]:
+	- gestione degli insegnanti assenti per soluzioni:
+		1 sostituzione dell'insegnante assente:
+			- cercare gli insegnanti (a disposizione) che possono sostituire l'insegnante assente con algoritmo che tenga conto di:
+				** l'ordine dei punti non è ordinato, ORDINARLO per priorità **
+				- favorire insegnanti della stessa classe
+				- tenere conto della posizione del docente (se in sede o succursale)
+				- tenere conto delle sostituzioni già fatte da ogni docente (favorire chi non ha ancora sostituito nessuno)
+				- favorire docenti della stessa materia
+				- tenere conto dei laboratori (ci sono 2 o più docenti, non serve sostituire)
+				- tenere conto dei docenti di sostegno ***
+				- [[altro]]
+		2 uscita/entrata anticipata/posticipata della classe (soluzione migliore)
+__________________________________________________________________________
+Cosa abbiamo a disposizione:
+- file .csv
+	- chiedere a Giannini
+
+Come fare:
+- analizzare i dati a disposizione e da usare
+	- orario dei docenti
+		- nome docente
+		- cognome docente
+		- materia docente
+- strutture dati: -JSON- o CSV? (JSON MIGLIORE)
+
+GUI (schermate):
+- docenti 	** forse **
+- orari		** poi ci si pensa **
+- [[altro]]
+
+GUI (informazioni):
+- non è stato aggiunto alcun docente nella lista degli assenti
+- soluzione migliore: uscita della classe ** quando possibile **
+- soluzione 1: [[nome prof]]
+- soluzione 2: [[nome prof]]...
+__________________________________________________________________________
+CREARE UN FILE MIGLIORE DI QUESTO, QUESTO E' TEMPORANEO
+- file .md o .doc
