@@ -50,7 +50,7 @@ Le voci contrassegnate da `*` sono idee temporanee
     - Tab 1: Mostra / Inserisci (*mostra una nuova pagina*) docenti assenti 
     - Tab 2: Docenti disponibili a sostituire i docenti assenti
         - Tabella disposta in | NOME e COGNOME | DISPONIBLITA' (ora, tutto il giorno, non disp.) `*`
-    - Tab 4: Mostra classi `*`
+    - Tab 3: Mostra classi `*`
     - Bottone: Genera orario (*mostra una nuova pagina*)
 
 Altre pagine:
