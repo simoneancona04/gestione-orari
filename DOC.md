@@ -32,3 +32,21 @@ Gestione automatica dell'orario dati gli input dell'operatore e i dati del datab
     - `1.1` Uscita anticipata della classe    
     - `1.2` Entrata posticipata della classe    
     - `1.3` Sostituzione del docente   
+        - `1.3.1` Cercare tutti i docenti disponibili in quell'orario e ordinarli per:
+            - `1.3.1.1` Favorire insegnanti della stessa materia
+            - `1.3.1.2` Favorire insegnanti della stessa classe
+            - `1.3.1.3` Distanza dalla classe (posizione del docente: sede/succursale)
+            - `1.3.1.4` Sostituzioni già fatte (favorire chi non ha ancora sostituito nessuno)
+            - `1.3.1.5` Tenere conto dei laboratori (se ci sono 2 docenti, non ha senso sostituire)
+
+Creazione del progetto
+----------------------
+
+### Interfacce grafiche
+
+Le voci contrassegnate da * sono idee temporanee *
+
+- Schermata principale
+    - Tab 1: Mostra / Inserisci (*mostra una nuova pagina*) docenti assenti 
+    - Tab 2: Docenti disponibili
+        - Tabella disposta in | NOME e COGNOME | DISPONIBLITA' (ora, tutto il giorno, non disp.)    
