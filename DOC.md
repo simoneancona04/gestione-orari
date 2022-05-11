@@ -44,9 +44,20 @@ Creazione del progetto
 
 ### Interfacce grafiche
 
-Le voci contrassegnate da * sono idee temporanee *
+Le voci contrassegnate da `*` sono idee temporanee
 
 - Schermata principale
     - Tab 1: Mostra / Inserisci (*mostra una nuova pagina*) docenti assenti 
-    - Tab 2: Docenti disponibili
-        - Tabella disposta in | NOME e COGNOME | DISPONIBLITA' (ora, tutto il giorno, non disp.)    
+    - Tab 2: Docenti disponibili a sostituire i docenti assenti
+        - Tabella disposta in | NOME e COGNOME | DISPONIBLITA' (ora, tutto il giorno, non disp.) `*`
+    - Tab 4: Mostra classi `*`
+    - Bottone: Genera orario (*mostra una nuova pagina*)
+
+Altre pagine:
+- Modifica docente disponibile
+    - Motivazione : textarea
+    - Orario : lista orari
+    - Info docente : labels (Readonly)
+
+- Orario generato
+    - Per ogni *continua qua...*    
