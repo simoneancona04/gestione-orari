@@ -1,12 +1,16 @@
 package com.gestioneorari;
 
+import com.opencsv.exceptions.CsvValidationException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.FileReader;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+
 import com.opencsv.*
 ;
 
@@ -38,13 +42,28 @@ public class App extends Application {
     }
 
     private static void loadCSV(){
+        var fileName = "db/aule.csv";
 
+        try (var fr = new FileReader(fileName, StandardCharsets.UTF_8);
+             var reader = new CSVReader(fr)) {
+
+            String[] nextLine;
+
+            while ((nextLine = reader.readNext()) != null) {
+
+                for (var e : nextLine) {
+                    System.out.printf("%s ", e);
+                }
+            }
+        } catch (IOException | CsvValidationException e) {
+            e.printStackTrace();
+        }
     }
 
 
 
     public static void main(String[] args) {
-        loadCSV()
+        loadCSV();
         launch();
     }
 
