@@ -7,6 +7,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import com.opencsv.*
+;
 
 /**
  * JavaFX App
@@ -14,6 +16,7 @@ import java.io.IOException;
 public class App extends Application {
 
     private static Scene scene;
+    
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -21,6 +24,9 @@ public class App extends Application {
         stage.setScene(scene);
         stage.show();
     }
+
+    @Override
+    public void stop() {}
 
     static void setRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml));
@@ -31,7 +37,14 @@ public class App extends Application {
         return fxmlLoader.load();
     }
 
+    private static void loadCSV(){
+
+    }
+
+
+
     public static void main(String[] args) {
+        loadCSV()
         launch();
     }
 
