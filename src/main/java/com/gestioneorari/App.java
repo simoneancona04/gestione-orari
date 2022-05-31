@@ -20,6 +20,7 @@ import com.opencsv.*
 public class App extends Application {
 
     private static Scene scene;
+
     
 
     @Override
@@ -44,7 +45,7 @@ public class App extends Application {
     private static void loadCSV(){
         var fileName = "db/aule.csv";
 
-        try (var fr = new FileReader(fileName, StandardCharsets.UTF_8);
+        try (var fr = new FileReader(fileName, StandardCharsets.UTF_16LE);
              var reader = new CSVReader(fr)) {
 
             String[] nextLine;
@@ -52,7 +53,7 @@ public class App extends Application {
             while ((nextLine = reader.readNext()) != null) {
 
                 for (var e : nextLine) {
-                    System.out.printf("%s ", e);
+                    System.out.printf("%s\n ", e);
                 }
             }
         } catch (IOException | CsvValidationException e) {
